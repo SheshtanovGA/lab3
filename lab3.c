@@ -6,7 +6,6 @@ char *hexidecimal(int sample[8]) {
     for (int i = 0; i < 8; i++) {
         sprintf((field + 11*i), "0x%8x", sample[i]);
     }
-    // для красоты
     for (int i = 0; i < 11*8; i++) {
         if (*(field+i) == ' ') *(field+i) = '0';
         if ((*(field+i) > 'a'-1)&&(*(field+i) < 'g')) *(field + i) += 'A'-'a';
